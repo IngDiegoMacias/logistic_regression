@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>¿Clientes existentes contratarán un depósito a largo plazo?</title>
+</head>
+<body>
+    <h2>Introducir los valores</h2>
+    <form action="/" method="post">
+        Duración del contacto previo en segundos (numérico): <input type="number" step="any" name="durat" required><br><br>
+        Número de días que transcurrieron desde la última campaña hasta que fue contactado (numérico): <input type="number" step="any" name="pdays" required><br><br>
+        Tasa de variación del empleo. Indicador trimestral (numérico): <input type="number" step="any" name="varem" required><br><br>
+        Tasa EURIBOR 3 meses. Indicador diario (numérico): <input type="number" step="any" name="eurib" required><br><br>
+        Número de empleados. Indicador trimestral (numérico): <input type="number" step="any" name="numem" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction != 0 %}
+        <h3>Prediction: {{ prediction }}</h3>
+    {% endif %}
+</body>
+</html>
